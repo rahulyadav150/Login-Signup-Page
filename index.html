@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <p class="signup">Sign up</p>
+        <p class="login">Log in</p>
+        <div class="signup-form">
+            <input class="input" type="text" placeholder="Name"><br>
+            <input class="input" type="text" placeholder="Email"><br>
+            <input class="input" type="text" placeholder="Password"><br>
+            <button class="btn input">Create Account</button>
+        </div>
+        <div class="login-form">
+        <input class="input" type="text" placeholder="Email"><br>
+        <input class="input" type="text" placeholder="Password"><br>
+        <button class="btn input">Log in</button>
+        </div>
+       
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(".login-form").hide();
+        $(".login").css("background","none");
+        $(".login").click(function(){
+            $(".signup-form").hide();
+            $(".login-form").show();
+           
+            $(".login").css("background","white");
+            $(".signup").css("background","none");
+        });
+        $(".signup").click(function(){
+            $(".login-form").hide();
+            $(".signup-form").show();
+            
+           
+            $(".signup").css("background","white");
+            $(".login").css("background","none");
+        });
+    </script>
+</body>
+</html>
